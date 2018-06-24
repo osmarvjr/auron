@@ -25,7 +25,7 @@ public class Par {
 		this.sorteio = sorteio;
 	}
 
-	Par() {
+	public Par() {
 	}
 
 	public Integer getId() {
