@@ -1,5 +1,6 @@
 
-# Created by https://www.gitignore.io/api/java,maven,eclipse,intellij,java-web
+# Created by https://www.gitignore.io/api/java,maven,eclipse,java-web,intellij+all
+# Edit at https://www.gitignore.io/?templates=java,maven,eclipse,java-web,intellij+all
 
 ### Eclipse ###
 
@@ -69,7 +70,9 @@ local.properties
 # Annotation Processing
 .apt_generated
 
-### Intellij ###
+.sts4-cache/
+
+### Intellij+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and WebStorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
@@ -79,6 +82,9 @@ local.properties
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+
+# Generated files
+.idea/**/contentModel.xml
 
 # Sensitive or high-churn files
 .idea/**/dataSources/
@@ -92,6 +98,14 @@ local.properties
 # Gradle
 .idea/**/gradle.xml
 .idea/**/libraries
+
+# Gradle and Maven with auto-import
+# When using Gradle or Maven with auto-import, you should exclude module files,
+# since they will be recreated, and may cause churn.  Uncomment if using
+# auto-import.
+# .idea/modules.xml
+# .idea/*.iml
+# .idea/modules
 
 # CMake
 cmake-build-*/
@@ -123,16 +137,21 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 
-### Intellij Patch ###
-# Comment Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-215987721
+# Android studio 3.1+ serialized cache file
+.idea/caches/build_file_checksums.ser
 
-# *.iml
-# modules.xml
-# .idea/misc.xml
-# *.ipr
+### Intellij+all Patch ###
+# Ignores the whole .idea folder and all .iml files
+# See https://github.com/joeblau/gitignore.io/issues/186 and https://github.com/joeblau/gitignore.io/issues/360
 
-# Sonarlint plugin
-.idea/sonarlint
+.idea/
+
+# Reason: https://github.com/joeblau/gitignore.io/issues/186#issuecomment-249601023
+
+*.iml
+modules.xml
+.idea/misc.xml
+*.ipr
 
 ### Java ###
 # Compiled class file
@@ -174,5 +193,5 @@ buildNumber.properties
 .mvn/timing.properties
 .mvn/wrapper/maven-wrapper.jar
 
+# End of https://www.gitignore.io/api/java,maven,eclipse,java-web,intellij+all
 
-# End of https://www.gitignore.io/api/java,maven,eclipse,intellij,java-web
