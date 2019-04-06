@@ -6,15 +6,24 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 @Entity
+@NoArgsConstructor
+@Getter @Setter
 public class Par {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
 	@ManyToOne
 	private Participante amigo;
+	
 	@ManyToOne
 	private Participante amigoOculto;
+	
 	@ManyToOne
 	private Sorteio sorteio;
 
@@ -22,41 +31,6 @@ public class Par {
 		super();
 		this.amigo = amigo;
 		this.amigoOculto = amigoOculto;
-		this.sorteio = sorteio;
-	}
-
-	public Par() {
-	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public Participante getAmigo() {
-		return amigo;
-	}
-
-	public void setAmigo(Participante amigo) {
-		this.amigo = amigo;
-	}
-
-	public Participante getAmigoOculto() {
-		return amigoOculto;
-	}
-
-	public void setAmigoOculto(Participante amigoOculto) {
-		this.amigoOculto = amigoOculto;
-	}
-
-	public Sorteio getSorteio() {
-		return sorteio;
-	}
-
-	public void setSorteio(Sorteio sorteio) {
 		this.sorteio = sorteio;
 	}
 

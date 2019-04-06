@@ -41,7 +41,8 @@ public class Sorteador {
 
 	private void verificaTamanhoDaListaDeParticipantes() throws SorteioException {
 		if(totalDeParticipantes<2) {
-			throw new SorteioException("Por favor, insira uma lista de participantes com no minimo dois participantes");
+			throw new SorteioException("Por favor, insira uma lista de participantes com no minimo "
+					+ "dois participantes");
 		}
 	}
 

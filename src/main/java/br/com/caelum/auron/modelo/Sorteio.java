@@ -10,30 +10,20 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @Entity
 public class Sorteio {
-	@Id
+	@Id @Getter @Setter
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	
+	@Getter @Setter
 	private String nome;
+	
 	@OneToMany(mappedBy="sorteio")
 	private Set<Par> pares = new LinkedHashSet<>();
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
 
 	public Set<Par> getPares() {
 		return Collections.unmodifiableSet(pares);

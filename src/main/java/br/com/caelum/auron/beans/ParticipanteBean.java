@@ -43,7 +43,8 @@ public class ParticipanteBean {
 	
 	public String login() {
 		try {
-			UsernamePasswordToken token = new UsernamePasswordToken(participante.getEmail(), participante.getSenha());
+			UsernamePasswordToken token = new UsernamePasswordToken(participante.getEmail(), 
+					participante.getSenha());
 			user.login(token);
 			
 			return "sorteio?faces-redirect=true";
